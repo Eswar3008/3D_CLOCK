@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Charset -->
+    <meta charset="utf-8">
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Title -->
+    <title>#3DCSS clock</title>
+
+    <!-- Description -->
+    <meta name="description" content="css clock.">
+
+    <!-- Author -->
+    <meta name="ER" content="#3DCssChallenge">
+
+
+    <!-- Icon -->
+    <link rel="icon" type="image/png" href="icon.png">
+
+    <!-- Apple touch icon -->
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="##C4C4C4">
+    <meta name="msapplication-TileColor" content="##C4C4C4">
+    <meta name="msapplication-navbutton-color" content="##C4C4C4">
+    <meta name="apple-mobile-web-app-status-bar-style" content="##C4C4C4">
+
+
+    <!-- Url -->
+    <meta property="og:url" content="https://github.com/Eswar3008">
+
+    <!-- Title -->
+    <meta property="og:title" content="3D CSS clock">
+
+    <!-- Description -->
+    <meta property="og:description" content=" #3DCssChallenge TASK1 clock.">
+
+    <!-- Icon -->
+    <meta property="og:image" content="icon-1200x630.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta property="og:type" content="page">
+
+
+    
+    <!-- Twitter type of showed banner -->
+    <meta property="twitter:card" content="summary_large_image">
+
+    <!-- Title -->
+    <meta property="twitter:title" content=" clock">
+
+    <!-- Description -->
+    <meta property="twitter:description" content=" clock.">
+
+    <!-- Icon -->
+    <meta property="twitter:image:src" content="icon-1200x630.png">
+    <meta property="twitter:image:width" content="1200">
+    <meta property="twitter:image:height" content="630">
+</head>
+
+<body>
+    <div class="clock">
+        <div class="hour">
+            <div class="hr" id="hr"></div>
+        </div>
+        <div class="min">
+            <div class="mn" id="mn"></div>
+        </div>
+        <div class="sec">
+            <div class="sc" id="sc"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        const deg = 6;
+        const hr = document.querySelector('#hr');
+        const mn = document.querySelector('#mn');
+        const sc = document.querySelector('#sc');
+
+        setInterval(() => {
+            let day = new Date();
+
+            let hh = day.getHours();
+            let mm = day.getMinutes();
+            let ss = day.getSeconds();
+            let ms = day.getMilliseconds();
+
+            hr.style.transform = `rotateZ(${(hh*30)+(mm/2)}deg`;
+            mn.style.transform = `rotateZ(${(mm*6)+(ss/10)}deg`;
+            sc.style.transform = `rotateZ(${(ss*6)+(ms/1000*6)}deg`;
+        })
+    </script>
+
+    <!-- <footer class="footer-container text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <p>© UXER | Developed by <a href="https://www.instagram.com/uxer_3008/" title="Product Designer">Eswar Ala</a></p>
+          </div>
+        </div>
+      </footer> -->
+      
+</body>
+
+
+</html>
